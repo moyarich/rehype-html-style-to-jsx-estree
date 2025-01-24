@@ -1,0 +1,41 @@
+{
+  "name": "rehype-html-style-to-jsx-estree",
+  "version": "1.0.0",
+  "description": "A plugin to transform HTML style strings into JSX-compatible ESTree objects for use in MDX.",
+  "author": "Moya Richards",
+  "license": "MIT",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint . --ext .ts,.tsx",
+    "prepublishOnly": "npm run build && npm test && npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moyarich/rehype-html-style-to-jsx-estree.git"
+  },
+  "keywords": [
+    "rehype",
+    "mdx",
+    "plugin",
+    "style",
+    "jsx",
+    "estree"
+  ],
+  "dependencies": {
+    "hast": "^0.0.2",
+    "mdast-util-mdx-jsx": "^3.2.0",
+    "unist-util-visit": "^5.0.0",
+  },
+  "devDependencies": {
+    "typescript": "^5.2.0",
+    "@types/node": "^20.7.0",
+    "@eslint/compat": "^1.2.2",
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.14.0",
+  },
+  "peerDependencies": {
+    "unist-util-visit": "^5.0.0",
+  }
+}
